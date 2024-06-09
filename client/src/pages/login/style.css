@@ -1,0 +1,145 @@
+.log-con {
+  display: flex;
+  height: 100vh;
+}
+.logleft {
+  width: 50%;
+  height: 100%;
+  background: url(/image/back.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.logo img{
+  width: 150px;
+}
+
+.logright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  padding: 5%;
+  position: relative;
+}
+
+.logright form {
+  width: 450px;
+  padding: 30px;
+}
+
+.logright input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+  background-color: #f7f7f7;
+  border: 1px solid #eee;
+  font-size: 1rem;
+}
+
+.logright button {
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: rgb(36, 74, 156);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: all .3s ease;
+}
+
+.logright button:hover {
+  background-color: rgb(31, 62, 129);
+}
+
+.frgt {
+  text-align: center;
+  display: block;
+  font-size: .93rem;
+  color: rgb(36, 74, 156);
+  font-weight: 500;
+}
+.logright .sign {
+  text-align: center;
+  margin-top: 10px;
+  font-size: .98rem;
+}
+
+.sign a{
+  color: rgb(36, 74, 156);
+  font-weight: 500;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    rgba(127, 115, 197, 0.096),
+    rgba(65, 63, 63, 0.514),
+    rgba(127, 115, 197, 0.096)
+  );
+}
+.con {
+  position: relative;
+  margin: 20px 0;
+}
+.or {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  background: #fff;
+  font-size: 1.1rem;
+}
+.gbtn{
+    padding: 10px;
+    background-color: #f6f6f6;
+    /* border: 1px solid #eee; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    transition: all .3s ease;
+    color: #3d3d3d;
+    font-size: .97rem;
+    font-weight: 500;
+}
+.gbtn:hover{
+  background-color: #eee;
+  color: #000;
+}
+
+
+/* .......................................Frgt....................................... */
+
+.frgtf h3{
+  /* color: #3d3d3d; */
+  font-size: 1.3rem;
+}
+.frgtf .ins{
+  font-size: .96rem;
+  margin: 7px 0 50px 0;
+}
+
+ .back{
+  font-size: 1rem;
+  margin-top: 40px;
+  text-align: center;
+}
+.back a{
+  color: rgb(36, 74, 156);
+  font-weight: 500;
+}
