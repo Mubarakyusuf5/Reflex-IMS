@@ -1,0 +1,265 @@
+.crumb {
+  padding: 15px 20px;
+  background-color: var(--foreground);
+  border-radius: var(--bdrs);
+  box-shadow: var(--box-shdw);
+}
+
+.crumb a.active {
+  color: var(--main-clr);
+  font-weight: 600;
+}
+
+.body {
+  margin-top: 30px;
+}
+
+.head {
+  background-color: var(--tbl-hd);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-radius: var(--bdrs-t);
+}
+
+.head h3 {
+  color: var(--font-color-lgry);
+}
+
+.body .head button {
+  padding: 9px 10px;
+  background-color: var(--add-btn);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: var(--bdrs);
+  border: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  /* margin-right: 40px; */
+}
+
+.body .head button:hover {
+  background-color: var(--add-btn-hvr);
+}
+
+.table {
+  background-color: #fff;
+  padding: 0px 20px 10px;
+  box-shadow: var(--box-shdw);
+  border-radius: var(--bdrs-b);
+  width: 100%;
+  /* margin-top: 20px; */
+}
+
+/* .table select{
+    width: 200px;
+} */
+
+.func {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.func .search input {
+  border: 0;
+  outline: 0;
+  padding: 10px;
+  width: 190px;
+  background-color: transparent;
+}
+
+.func .search {
+  border: 1px solid #bdbdbd;
+  border-radius: var(--bdrs);
+  overflow: hidden;
+  background-color: #fff;
+  padding-right: 10px;
+}
+
+.func .search .sIcon {
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #bdbdbd;
+}
+
+.sale .select {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 400px;
+}
+
+.sale button{
+    width: 170px;
+}
+
+.select select{
+    border-radius: var(--bdrs);
+    /* width: 190px; */
+}
+
+.table table{
+    width: 100%;
+    /* border: 1px solid #eee; */
+    text-align:left;
+    border-collapse: collapse;
+  }
+  
+  .report td, .report th{
+  border: 1px solid #a3a3a3;
+  /* border: ; */
+}
+
+.table table td, th{
+    padding: 8px;
+    /* border-right: 1px solid #000; */
+}
+
+.table table tr{
+    transition: all .3s ease;
+    border-bottom: var(--b-btm);
+}
+
+.table table tbody tr:hover{
+    background-color: var(--tr-hvr);
+}
+
+.table table td .actBtn, .rdt_TableCell .actBtn{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.table table td .actBtn button, .rdt_TableCell button {
+  border-radius: var(--bdrs-rnd);
+  border: 0;
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.rdt_TableCell, .rdt_TableCol{
+  font-size: .9rem;
+}
+
+.table table td .actBtn button:nth-child(1), .rdt_TableCell button:nth-child(1) {
+  background-color: var(--prcd-clr);
+  color: #fff;
+}
+.table table td .actBtn button:nth-child(1):hover, .rdt_TableCell button:nth-child(1):hover {
+  background-color: var(--prcd-clr-hvr);
+}
+.table table td .actBtn button:nth-child(2), .rdt_TableCell button:nth-child(2) {
+  background-color: var(--del-btn);
+  color: #fff;
+}
+.table table td .actBtn button:nth-child(2):hover, .rdt_TableCell button:nth-child(2):hover {
+  background-color: var(--del-btn-hvr);
+}
+
+.sale .table {
+  padding-bottom: 10px;
+}
+
+.proceedBtn{
+  border: 0;
+  outline: 0;
+  padding: 10px;
+  background-color: var(--add-btn);
+  border-radius: var(--bdrs);
+  font-size: 1rem;
+  font-weight: 600;
+  width: 170px;
+  color: var(--foreground);
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.proceedBtn:hover{
+  background-color: var(--add-btn-hvr);
+}
+
+.total{
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+.quan{
+  padding: 8px;
+  width: 50px;
+  outline: 0;
+  border: 1px solid #d6d6d6;
+  border-radius: var(--bdrs);
+}
+.quan:focus{
+  border: 1px solid var(--main-clr);
+
+}
+
+.dateCon{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 0 ;
+  gap: 30px;
+}
+
+.dateGroup{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.dateGroup label{
+  font-weight: 600;
+}
+
+.dateCon input{
+  padding: 10px;
+  border-radius: var(--bdrs);
+  border: 1px solid var(--cncl-clr);
+}
+
+
+/* `````````````````````````````pagination `````````````````````````````````` */
+
+.pagination{
+  display: flex;
+  margin: 10px 0;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* .page-item{
+  padding: 5px 10px;
+  border: 1px solid blue;
+  border-radius: var(--bdrs);
+  color: blue;
+  cursor: pointer;
+} */
+
+.pagination .active .page-link{
+  background-color: var(--main-clr);
+  color: #fff;
+}
+
+.pagination a{
+  display: block;
+  padding: 5px 10px;
+  border: 1px solid var(--main-clr);
+  border-radius: var(--bdrs);
+  color: var(--main-clr);
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.pagination a:hover{
+  background-color: var(--main-clr-hvr);
+  color: #fff;
+}

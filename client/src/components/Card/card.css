@@ -1,0 +1,75 @@
+.cardCon {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    margin-top: 30px;
+    transition: all .5s ease;
+}
+
+.card {
+    min-height: 130px;
+    /* width: 230px; */
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: start;
+    box-shadow: var(--box-shdw);
+    transition: .3s;
+    cursor: pointer;
+    /* border-left: 6px solid orangered; */
+    background-color: var(--foreground);
+    cursor: pointer;
+    color: var(--background-blk);
+}
+
+.card:hover {
+    transform: scale(1.05); 
+}
+
+.card1{
+    border-left: var(--b-left-tl);
+}
+.card2{
+    border-left: var(--b-left-bl) ;
+}
+.card3{
+    border-left: var(--b-left-or);
+}
+.card4{
+    border-left: var(--b-left-pl);
+}
+.card5{
+    border-left: var(--b-left-cr);
+}
+
+.text p{
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+.text h4{
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.card .icon{
+    font-size: 1.35rem;
+    margin-bottom: 20px;
+}
+
+.icon1 {
+    color: var(--icn-tl);
+}
+.icon2{
+    color: var(--icn-bl);
+}
+.icon3{
+    color: var(--icn-or);
+}
+.icon4{
+    color: var(--icn-pl);
+}
+.icon5{
+    color: var(--icn-cr);
+}

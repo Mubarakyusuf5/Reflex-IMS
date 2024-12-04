@@ -1,0 +1,44 @@
+  .modal-delCon {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .modal-delCon h2 {
+    margin-bottom: 10px;
+  }
+
+  .modal-delCon p{
+    margin: 10px 0 30px;
+  }
+
+  .modal-delCon .delMBtn{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .delMBtn button {
+    /* margin: 5px; */
+    padding: 8px;
+    border: 0;
+    outline: 0;
+    border-radius: var(--bdrs);
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .delMBtn button:nth-child(1){
+    background-color: var(--cncl-clr);
+  }
+  .delMBtn button:nth-child(1):hover{
+    background-color: var(--cncl-clr-hvr);
+  }
+  .delMBtn button:nth-child(2){
+    background-color: var(--del-btn);
+  }
+  .delMBtn button:nth-child(2):hover{
+    background-color: var(--del-btn-hvr);
+  }
+  

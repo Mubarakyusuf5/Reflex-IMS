@@ -1,0 +1,44 @@
+.drop{
+    position: absolute;
+    top: 40px;
+    left: -30px;
+    background-color: var(--background);
+    /* padding: 10px; */
+    border-radius: var(--bdrs);
+    /* display: flex;
+    flex-direction: column; */
+    width: 190px;
+    overflow: hidden;
+    display: none;
+    box-shadow: var(--box-shdw);
+}
+
+.drop button{
+    border: 0;
+    padding: 10px 20px;
+    background-color: var(--foreground);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1.03rem;
+    font-weight: 600;
+}
+
+.drop .icon{
+    font-size: .7rem;
+}
+
+.drop button:hover{
+    background-color: #ffffff9d;
+}
+
+/* .drop span{
+    font-size: 1.03rem;
+    font-weight: 600;
+} */
+
+.show{
+    display: block;
+}

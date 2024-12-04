@@ -5,10 +5,17 @@
 .logleft {
   width: 50%;
   height: 100%;
-  background: url(/image/back.jpg);
+  overflow: hidden;
+  /* background: url(/image/back.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
+}
+
+.logleft img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .logo img{
@@ -38,9 +45,14 @@
   border: none;
   outline: none;
   margin-bottom: 10px;
-  background-color: #f7f7f7;
-  border: 1px solid #eee;
+  background-color: #ffffff;
+  border: 1px solid #bdbcbc;
   font-size: 1rem;
+}
+
+.logright input:focus{
+  border: 1px solid var(--main-clr);
+
 }
 
 .logright button {
@@ -49,7 +61,7 @@
   cursor: pointer;
   border: none;
   outline: none;
-  background-color: rgb(36, 74, 156);
+  background-color: var(--main-clr);
   color: #fff;
   font-size: 1rem;
   font-weight: 500;
@@ -59,7 +71,7 @@
 }
 
 .logright button:hover {
-  background-color: rgb(31, 62, 129);
+  background-color: var(--main-clr-hvr);
 }
 
 .frgt {
@@ -80,7 +92,7 @@
   font-weight: 500;
 }
 
-hr {
+/* hr {
   border: none;
   height: 1px;
   background: linear-gradient(
@@ -89,7 +101,7 @@ hr {
     rgba(65, 63, 63, 0.514),
     rgba(127, 115, 197, 0.096)
   );
-}
+} */
 .con {
   position: relative;
   margin: 20px 0;

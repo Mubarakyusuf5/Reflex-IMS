@@ -1,0 +1,67 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 11;
+}
+
+.modal-con {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 260px;
+}
+
+.modal-con h2 {
+  margin-bottom: 20px;
+}
+
+.modal-con form input {
+  width: 100%;
+  padding: 10px;
+  border-radius: var(--bdrs);
+  border: 1px solid #b1b0b0;
+  outline: 0;
+  margin-top: 5px;
+}
+
+.dateGroup {
+  margin-bottom: 10px;
+}
+
+.modal-con .btnCon {
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 10px;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.modal-con button {
+  padding: 8px 13px;
+  border-radius: var(--bdrs);
+  border: 0;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.modal-con button:nth-child(1) {
+  background-color: var(--prcd-clr);
+}
+.modal-con button:nth-child(2) {
+  background-color: var(--cncl-clr);
+}
+.modal-con button:nth-child(1):hover {
+  background-color: var(--prcd-clr-hvr);
+}
+.modal-con button:nth-child(2):hover {
+  background-color: var(--cncl-clr-hvr);
+}

@@ -1,0 +1,98 @@
+.receipt{
+    width: 302px;
+    box-shadow: var(--box-shdw);
+    /* background-color: #eee; */
+    padding: 30px 10px;
+    font-size: .9rem;
+}
+
+.rDate{
+    font-size: .8rem;
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+ .top h3{
+    font-size: 1.2rem;
+    margin-top: 26px;
+    /* margin:3px ; */
+}
+
+.top .addr{
+    margin-top: 3px;
+    font-size: .8rem;
+}
+
+.top p:last-child{
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+.receipt table{
+    text-align: left;
+    margin-top: 5px;
+    font-size: .9rem;
+}
+
+.receipt table td{
+    padding: 3px;
+}
+
+.receipt .pLast{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.overTotal{
+    margin: 10px 0;
+}
+
+.reportPrint{
+    padding: 40px 30px;
+    width: 100%;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.reportPrint table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+.reportPrint td, .reportPrint th{
+    padding: 10px;
+}
+
+.RHead{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.RHead h1{
+    font-size: 3.5rem;
+}
+
+.RHead h2{
+    font-size: 2.5rem;
+}
+
+.RHead p{
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.range{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+

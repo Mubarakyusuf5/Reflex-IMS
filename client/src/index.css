@@ -1,6 +1,50 @@
-/* :root {
+:root {
+  --box-shdw: 0px 1px 3px rgba(0,0,0,0.3);
+  --foreground: #fff;
+  --background: #eee;
+  --main-clr: rgb(36, 74, 156);
+  --main-clr-hvr: rgb(31, 62, 129);
+  --background-blk:#000;
+  --b-left-tl: 6px solid teal;
+  --b-left-bl: 6px solid #0000ff;
+  --b-left-or: 6px solid orangered;
+  --b-left-pl: 6px solid rgb(212, 0, 212);
+  --b-left-cr: 6px solid crimson;
+  --icn-tl: teal;
+  --icn-bl: #0000ff;
+  --icn-or: orangered;
+  --icn-pl: rgb(212, 0, 212);
+  --icn-cr: crimson;
+  --b-btm: 1px solid #b4b4b4;
+  --font-color-blk: #000;
+  --font-color-lgry: #161616;
+  --edt-btn: rgb(30, 30, 230);
+  --edt-btn-hvr: rgb(15, 15, 148);
+  --del-btn: rgb(250, 80, 50);
+  --del-btn-hvr: rgb(197, 37, 9);
+  --add-btn: rgb(13, 175, 13);
+  --add-btn-hvr: rgb(4, 153, 4);
+  --tr-hvr: #eee;
+  --tbl-hd: #ffffff98;
+  --bdrs: 5px;
+  --bdrs-rnd: 50%;
+  --bdrs-t: 5px 5px 0 0;
+  --bdrs-b: 0 0 5px 5px;
+  --prcd-clr: #007bff;
+  --prcd-clr-hvr: #0056b3;
+  --cncl-clr: #999999;
+  --cncl-clr-hvr: #7c7c7c;
+}
 
+/* body {
+  overflow: hidden; 
+  scrollbar-width: none; 
 } */
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 
 *{
   padding: 0;
@@ -10,3 +54,27 @@
   list-style: none;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+
+
+.content{
+  position: relative;
+  background-color: var(--background);
+  min-height: 100vh;
+  top: 0;
+  left: 80px;
+  width: calc(100% - 80px);
+  transition: all .3s ease;
+  overflow-y: auto;
+}
+
+.main{
+  padding: 40px 20px 20px;
+}
+
+/* @media (max-width: 768px) {
+  .content {
+    max-height: 100vh; 
+    padding: 20px;
+  }
+} */

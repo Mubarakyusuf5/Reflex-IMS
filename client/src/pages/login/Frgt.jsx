@@ -6,11 +6,11 @@ export const Frgt = () => {
     <>
       <div className="log-con">
         <div className="logleft">
-          {/* <img src="/image/back.jpg" alt="" /> */}
+          <img src="/image/back.jpg" alt="" />
         </div>
         <div className="logright">
           <div className="logo">
-            <img src="/image/ABNB_BIG.png" alt="" />
+            <img src="/image/ABNB_BIG.png" loading="lazy" alt="" />
           </div>
           <form action="" className="frgtf">
             <h3>Reset Password</h3>
