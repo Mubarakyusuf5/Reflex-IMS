@@ -40,12 +40,12 @@ const loginUser = async (req, res) => {
 
     const user = await Users.findOne({ username })
     if (!user) {
-      return res.status(400).json({ error: 'User not found'})
+      return res.status(400).json({ message: 'User not found'})
     }
 
     const match = await comparePassword(password, user.password)
     if (!match) { 
-      return res.json({error: "Incorrect password"})
+      return res.json({message: "Incorrect password"})
     }
     const token = createToken(user)
     res.cookie("token",token,{

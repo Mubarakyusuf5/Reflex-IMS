@@ -4,7 +4,7 @@ require("dotenv").config()
 
 const createToken = (user)=>{
     const accessToken = sign(
-        {id: user.id, role: user.role}, process.env.JWT_SECRET_KEY
+        {id: user.id,  role: user.role}, process.env.JWT_SECRET_KEY
     )
 
     return accessToken

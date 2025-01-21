@@ -10,7 +10,7 @@ export const Navbar = ({onClick}) => {
   const [show, setIsShow]= useState(false)
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
   // const [fullname, setFullname] = useState("Unknown");
-  const { role, user, } = useAuth();
+  const { user } = useAuth();
 
   useEffect(() => {
     setInterval(() => {
@@ -39,8 +39,8 @@ export const Navbar = ({onClick}) => {
 
             <div className="demo">
             <div className="user">
-              <p className="name">{user?.fullname || "Unknown"}</p>
-              <p>{role === "admin" ? "admin" : "user"}</p>
+              <p className="name">{user?.username}</p>
+              <p>{user?.role}</p>
             </div>
               <FontAwesomeIcon icon={faUserAlt} className='uIcon' />
             </div>

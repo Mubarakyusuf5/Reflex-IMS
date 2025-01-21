@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 export const UserDashboard = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const { user, role } = useAuth();
+  const { user } = useAuth();
 
   const toggleMenu = () => {
     setIsOpen(prevState => !prevState);
@@ -33,7 +33,7 @@ export const UserDashboard = () => {
             <span>Dashboard</span>
           </div>
             <div className="Uwelcome">
-              <h1>Welcome {user ? user.username : "me"}</h1>
+              <h1>Welcome {user ? user?.username : "Guest"}</h1>
             </div>
 
             <Link to="/sales">

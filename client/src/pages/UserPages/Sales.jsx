@@ -26,7 +26,8 @@ export const Sales = () => {
     subTotal: 0,
   });
   const [deleteIndex, setDeleteIndex] = useState(null);
-  const { role } = useAuth();
+  const { user } = useAuth();
+  // const salesman = user._id
 
   const contentRef = useRef();
 
@@ -124,8 +125,15 @@ export const Sales = () => {
       await axios.post("/api/user/createSale", {
         itemSales,
         modeOfPayment,
+        user:user._id,
         overallTotal,
       });
+      // console.log(await axios.post("/api/user/createSale", {
+      //   itemSales,
+      //   modeOfPayment,
+      //   user:user._id,
+      //   overallTotal,
+      // }))
       toast.success("Sales data submitted successfully!");
       handleReactToPrint();
       setSales([]); // Clear sales after successful submission
@@ -147,7 +155,6 @@ export const Sales = () => {
 
   return (
     <>
-    {role === "user"? (
       <div className="container">
         <Sidebar isOpen={isOpen} />
         <Navbar onClick={toggleMenu} />
@@ -301,10 +308,6 @@ export const Sales = () => {
           </div>
         </div>
       </div>
-
-    ) : (
-      <h1>Not Authorized</h1>
-    )}
       {showDeleteModal && <DeleteModal onClose={handleCloseModal} onDelete={handleDeleteBtn} />}
     </>
   );

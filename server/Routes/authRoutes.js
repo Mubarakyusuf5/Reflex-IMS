@@ -10,7 +10,9 @@ const { VerifyToken } = require("../middlewares/jwt.js");
 
 router.post("/register", registerUser);
 router.post("/login", loginUser);
-router.get("/protected", VerifyToken ,getUser);
+router.get("/protected", 
+  // VerifyToken ,
+  getUser);
 router.post("/logout", logout);
 
 module.exports = router;

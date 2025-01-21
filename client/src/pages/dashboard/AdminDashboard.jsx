@@ -29,7 +29,7 @@ export const AdminDashboard = () => {
   const [sales, setSales] = useState([]);
   const [filteredSales, setFilteredSales] = useState([]);
   const [overallTotal, setOverallTotal] = useState("");
-  const { role, user } = useAuth();
+  const { user } = useAuth();
   const navigate = useNavigate()
 
   const toggleMenu = () => {
@@ -37,19 +37,12 @@ export const AdminDashboard = () => {
   };
 
   useEffect(() => {
-
-    if (role !== "admin") {
-      toast.error("Unauthorized access");
-      navigate("/"); // Redirect to a general user dashboard or login
-      return;
-    }
-
     fetchSupplier();
     fetchUser();
     fetchCategory();
     fetchProduct();
     fetchSales();
-  }, [role]);
+  }, []);
 
   const fetchSupplier = async () => {
     try {
@@ -174,7 +167,7 @@ export const AdminDashboard = () => {
     },
   ];
 
-  return role === "admin" ? (
+  return (
     <div className="container">
       <AdminSidebar isOpen={isOpen} />
       <Navbar onClick={toggleMenu} />
@@ -186,7 +179,7 @@ export const AdminDashboard = () => {
           </div>
 
           <div className="Uwelcome">
-              <h1>Welcome {user ? user.username : "me"}</h1>
+              <h1>Welcome {user ? user?.username : "Guest"}</h1>
             </div>
 
           <div className="cardCon">
@@ -249,6 +242,6 @@ export const AdminDashboard = () => {
         </div>
       </div>
     </div>
-  ) : null; // Optionally, you could render a loading spinner or unauthorized message here
+  )
 };
 
