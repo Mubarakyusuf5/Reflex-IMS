@@ -50,13 +50,13 @@ const loginUser = async (req, res) => {
       return res.json({message: "Incorrect password"})
     }
     const token = createToken(user)
-    res.cookie("token",token,{
-        httpOnly: true,
-        secure: true,
-        sameSite: true,
-        maxAge: 3600000
+   res.cookie("token", token, {
+  httpOnly: true,
+  secure: true,       // required on Vercel (HTTPS)
+  sameSite: "None",   // allow cross-site cookies
+  maxAge: 3600000
+});
 
-    })
     res.status(200).json({ message: "Login successful", user, token });
   } catch (error) {
     res.status(500).json({message: "Internal server error"})
