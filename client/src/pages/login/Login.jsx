@@ -35,6 +35,7 @@ export const Login = () => {
       
       toast.success(message || "Login successful");
     } catch (error) {
+      console.log(error)
       toast.error(error.response?.data?.message || "An error occurred during login");
     } finally {
       setLoading(false); // Stop loading regardless of success or error
@@ -86,6 +87,7 @@ export const Login = () => {
             >
               {loading ? <BeatLoader size={10} color={"#eee"} /> : "Log in"}
             </button>
+            <button>register</button>
           </form>
         </div>
       </div>

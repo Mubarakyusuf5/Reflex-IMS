@@ -22,6 +22,7 @@ app.use("/api/admin", require("./Routes/adminPageRoute.js"));
 app.use("/api/user", require("./Routes/userPageRoute.js"));
 
 const port = process.env.PORT || 3005;
+// console.log(port)
 const url = process.env.MONGO_URL;
 
 mongoose.connect(url)

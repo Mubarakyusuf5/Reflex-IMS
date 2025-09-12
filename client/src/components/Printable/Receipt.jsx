@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import Barcode from 'react-barcode';  // Import Barcode component
+// import {Barcode} from 'react-barcode';  // Import Barcode component
 import './print.css';
 
 export const Receipt = forwardRef((props, ref) => {
@@ -59,11 +59,11 @@ export const Receipt = forwardRef((props, ref) => {
       <p>
         <b>Payment Method:</b> {modeOfPayment}
       </p>
-      <div style={{ display: 'flex', justifyContent: 'center', margin: '20px 0', height: '50px', width: '90%' }}>
+      {/* <div style={{ display: 'flex', justifyContent: 'center', margin: '20px 0', height: '50px', width: '90%' }}>
           <Barcode 
             value={referenceId} 
           />
-        </div>
+        </div> */}
       <p className="pLast">Thanks for shopping with us</p>
     </div>
   );
