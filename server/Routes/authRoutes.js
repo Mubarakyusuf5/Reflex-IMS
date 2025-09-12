@@ -11,7 +11,7 @@ const { VerifyToken } = require("../middlewares/jwt.js");
 router.post("/register", registerUser);
 router.post("/login", loginUser);
 router.get("/protected", 
-  // VerifyToken ,
+  VerifyToken ,
   getUser);
 router.post("/logout", logout);
 
