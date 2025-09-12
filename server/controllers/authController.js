@@ -10,6 +10,7 @@ const { createToken } = require("../middlewares/jwt.js");
 const registerUser = async (req, res) => {
   try {
     const { fullname, username, email, password, role } = req.body;
+    sonsole.log(req.body)
     const exist = await Users.findOne({ email });
     const uname = await Users.findOne({ username });
     let errors = [];
@@ -30,6 +31,7 @@ const registerUser = async (req, res) => {
     });
     res.status(200).json({ message: "User registered successfully", newUser });
   } catch (error) {
+    console.log(error)
     res.status(500).json({ message: "Internal server error", error });
   }
 };
