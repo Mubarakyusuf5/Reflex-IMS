@@ -10,7 +10,7 @@ const { createToken } = require("../middlewares/jwt.js");
 const registerUser = async (req, res) => {
   try {
     const { fullname, username, email, password, role } = req.body;
-    sonsole.log(req.body)
+    console.log(req.body)
     const exist = await Users.findOne({ email });
     const uname = await Users.findOne({ username });
     let errors = [];
