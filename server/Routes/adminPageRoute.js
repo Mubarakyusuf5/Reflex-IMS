@@ -30,32 +30,41 @@ const { VerifyToken } = require("../middlewares/jwt.js");
 const authorizeRoles = require("../middlewares/RoleMiddleware.js");
 
 router.post("/createProduct", 
-  VerifyToken, authorizeRoles("admin"),
+  // VerifyToken, 
+            authorizeRoles("admin"),
    createProduct);
 router.put("/updateProduct/:id", 
-  VerifyToken, authorizeRoles("admin"),
+  // VerifyToken, 
+           authorizeRoles("admin"),
    updateProduct);
 router.delete("/deleteProduct/:id", 
-  VerifyToken, authorizeRoles("admin"),
+  // VerifyToken,
+              authorizeRoles("admin"),
    deleteProduct);
 router.get("/displayProduct", 
-  VerifyToken, authorizeRoles("admin", "user"),
+  // VerifyToken,
+           authorizeRoles("admin", "user"),
    displayProduct);
 router.get("/displayProduct/:id", 
-  VerifyToken, authorizeRoles("admin"),
+  // VerifyToken,
+           authorizeRoles("admin"),
    displayProductById);
 
 router.post("/createCategory", 
-  VerifyToken, authorizeRoles("admin"), 
+  // VerifyToken, 
+            authorizeRoles("admin"), 
   createCategory);
 router.put("/updateCategory/:id", 
-  VerifyToken, authorizeRoles("admin"), 
+  // VerifyToken, 
+           authorizeRoles("admin"), 
   updateCategory);
 router.delete("/deleteCategory/:id", 
-  VerifyToken, authorizeRoles("admin"), 
+  // VerifyToken, 
+              authorizeRoles("admin"), 
   deleteCategory);
 router.get("/displayCategory", 
-  VerifyToken, authorizeRoles("admin"), 
+  // VerifyToken, 
+           authorizeRoles("admin"), 
   displayCategory);
 router.get("/displayCategory/:id", 
   VerifyToken, authorizeRoles("admin"), 
@@ -84,7 +93,8 @@ router.delete("/deleteUser/:id",
   VerifyToken, authorizeRoles("admin"), 
   deleteUser);
 router.get("/displayUser", 
-  VerifyToken, authorizeRoles("admin"), 
+  // VerifyToken, 
+           authorizeRoles("admin"), 
   displayUser);
 
 
