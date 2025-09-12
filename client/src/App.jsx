@@ -17,7 +17,8 @@ import { Toaster } from 'react-hot-toast';
 import { AuthProvider } from './Context/AuthContext';
 import { Route, Routes } from 'react-router-dom';
 import axios from 'axios';
-axios.defaults.baseURL = 'http://localhost:3000';
+// axios.defaults.baseURL = 'http://localhost:3000';
+axios.defaults.baseURL = 'https://reflex-ims-server.vercel.app';
 axios.defaults.withCredentials = true;
 
 export const App = () => {
