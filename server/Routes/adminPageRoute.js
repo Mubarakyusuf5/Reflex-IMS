@@ -30,40 +30,40 @@ const { VerifyToken } = require("../middlewares/jwt.js");
 const authorizeRoles = require("../middlewares/RoleMiddleware.js");
 
 router.post("/createProduct", 
-  // VerifyToken, 
+  VerifyToken, 
             authorizeRoles("admin"),
    createProduct);
 router.put("/updateProduct/:id", 
-  // VerifyToken, 
+  VerifyToken, 
            authorizeRoles("admin"),
    updateProduct);
 router.delete("/deleteProduct/:id", 
-  // VerifyToken,
+  VerifyToken,
               authorizeRoles("admin"),
    deleteProduct);
 router.get("/displayProduct", 
-  // VerifyToken,
+  VerifyToken,
            authorizeRoles("admin", "user"),
    displayProduct);
 router.get("/displayProduct/:id", 
-  // VerifyToken,
+  VerifyToken,
            authorizeRoles("admin"),
    displayProductById);
 
 router.post("/createCategory", 
-  // VerifyToken, 
+  VerifyToken, 
             authorizeRoles("admin"), 
   createCategory);
 router.put("/updateCategory/:id", 
-  // VerifyToken, 
+  VerifyToken, 
            authorizeRoles("admin"), 
   updateCategory);
 router.delete("/deleteCategory/:id", 
-  // VerifyToken, 
+  VerifyToken, 
               authorizeRoles("admin"), 
   deleteCategory);
 router.get("/displayCategory", 
-  // VerifyToken, 
+  VerifyToken, 
            authorizeRoles("admin"), 
   displayCategory);
 router.get("/displayCategory/:id", 
@@ -93,7 +93,7 @@ router.delete("/deleteUser/:id",
   VerifyToken, authorizeRoles("admin"), 
   deleteUser);
 router.get("/displayUser", 
-  // VerifyToken, 
+  VerifyToken, 
            authorizeRoles("admin"), 
   displayUser);
 
