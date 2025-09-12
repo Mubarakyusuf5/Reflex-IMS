@@ -8,7 +8,8 @@ const app = express();
 
 // CORS Options
 const corsOptions = {
-  origin: "http://localhost:5173", // Set to the origin of your frontend
+  // origin: "http://localhost:5173", // Set to the origin of your frontend
+  origin: "https://reflexims.vercel.app", // Set to the origin of your frontend
   credentials: true,              
 };
 app.use(cookieParser())
