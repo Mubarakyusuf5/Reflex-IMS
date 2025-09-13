@@ -87,7 +87,7 @@ export const Login = () => {
             >
               {loading ? <BeatLoader size={10} color={"#eee"} /> : "Log in"}
             </button>
-            <button>register</button>
+{/*             <button>register</button> */}
           </form>
         </div>
       </div>
