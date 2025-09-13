@@ -4,9 +4,10 @@ import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faBook, faBagShopping, faHouse, faBoxArchive, faReceipt, faUserFriends, faTruck, faSignOut } from '@fortawesome/free-solid-svg-icons'
 import { LogoutBtn } from './LogoutBtn'
+import { useAuth } from "../../Context/AuthContext";
 
 export const Sidebar = ({isOpen}) => {
-    
+    const { user } = useAuth();
   return (
     <>
     <div className={`sidebar ${isOpen ? "active" : ""}`}>
@@ -15,7 +16,7 @@ export const Sidebar = ({isOpen}) => {
         </div>
         <ul className="side u">
             <li>
-                <NavLink className="sideLinks" to="/dashboard"><FontAwesomeIcon icon={faHouse} className='icon' /><span className='nav-item'>Dashboard</span></NavLink>
+                <NavLink className="sideLinks" to={user?.role === "admin" ? "/admin/dashboard" : "/dashboard"}><FontAwesomeIcon icon={faHouse} className='icon' /><span className='nav-item'>Dashboard</span></NavLink>
                 <span className="tooltip">Dashboard</span>
             </li>
             <li>
